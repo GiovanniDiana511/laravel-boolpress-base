@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', 'ArticleController@index')->name('articles.index');
+//Route::get('/', 'ArticleController@index')->name('articles.index');
+
+Route::resource('articles','ArticleController');
